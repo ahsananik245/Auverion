@@ -1,1 +1,5 @@
 .company-hero { padding: 4rem 0; }
+
+@media (max-width: 767px) {
+  .company-hero { padding: 2rem 0; }
+}

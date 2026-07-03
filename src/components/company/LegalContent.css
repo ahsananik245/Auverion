@@ -5,6 +5,7 @@
 }
 .legal-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 48px;
   border-bottom: 1px solid var(--border-primary);

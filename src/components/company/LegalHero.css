@@ -1,1 +1,5 @@
 .legal-hero { padding: 4rem 0; }
+
+@media (max-width: 767px) {
+  .legal-hero { padding: 2rem 0; }
+}

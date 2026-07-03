@@ -1,1 +1,5 @@
 .solutions-hero { padding: 4rem 0; }
+
+@media (max-width: 767px) {
+  .solutions-hero { padding: 2rem 0; }
+}

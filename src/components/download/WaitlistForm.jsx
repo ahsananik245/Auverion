@@ -42,7 +42,7 @@ const WaitlistForm = () => {
             </p>
           </div>
           
-          <div className="waitlist-form-wrapper" style={{ maxWidth: '500px', margin: '0 auto', background: 'var(--surface)', padding: '32px', borderRadius: '12px', border: '1px solid var(--border-primary)' }}>
+          <div className="waitlist-form-wrapper" style={{ width: '100%', maxWidth: '500px', margin: '0 auto', background: 'var(--surface)', padding: 'clamp(16px, 5vw, 32px)', borderRadius: '12px', border: '1px solid var(--border-primary)' }}>
             <form className="contact-form" onSubmit={handleSubmit}>
               {isSuccess && (
                 <div className="form-success" style={{ background: 'rgba(34, 197, 94, 0.1)', color: 'var(--semantic-success)', padding: '16px', borderRadius: '8px', marginBottom: '24px', border: '1px solid rgba(34, 197, 94, 0.2)' }}>
