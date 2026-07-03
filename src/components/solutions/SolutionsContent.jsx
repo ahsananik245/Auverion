@@ -56,7 +56,7 @@ const SolutionsContent = () => {
                 </div>
                 <h3 className="solution-card-title">{item.title}</h3>
                 <p className="solution-card-desc">{item.description}</p>
-                <a href="#" className="solution-link">Learn more <span className="arrow">→</span></a>
+                <span className="solution-link disabled" style={{opacity: 0.5, cursor: 'not-allowed'}}>Learn more (Coming Soon)</span>
               </div>
             ))}
           </div>

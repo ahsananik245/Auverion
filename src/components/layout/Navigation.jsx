@@ -49,7 +49,7 @@ const Navigation = () => {
 
             <div className="nav-actions hide-mobile hide-tablet">
               <Button variant="ghost" as={Link} to="/company/contact">Contact Us</Button>
-              <Button variant="primary">Download</Button>
+              <Button variant="primary" as={Link} to="/download">Download</Button>
             </div>
 
             <button 
@@ -83,7 +83,7 @@ const Navigation = () => {
           </div>
           <div className="mobile-nav-actions">
             <Button variant="ghost" as={Link} to="/company/contact" onClick={closeMobileMenu} style={{width: '100%', marginBottom: '16px'}}>Contact Us</Button>
-            <Button variant="primary" onClick={closeMobileMenu} style={{width: '100%'}}>Download Now</Button>
+            <Button variant="primary" as={Link} to="/download" onClick={closeMobileMenu} style={{width: '100%'}}>Download Now</Button>
           </div>
         </div>
       </div>

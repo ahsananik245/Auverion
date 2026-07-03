@@ -18,16 +18,16 @@ const PressContent = () => {
 
       <div className="press-grid">
         {pressReleases.map((press, idx) => (
-          <a href="#" className="press-item anim-slide-up" key={idx} style={{ animationDelay: `${idx * 100}ms` }}>
+          <div className="press-item anim-slide-up" key={idx} style={{ animationDelay: `${idx * 100}ms` }}>
             <div>
               <span className="press-date">{press.date}</span>
               <h3 className="press-title">{press.title}</h3>
               <span className="press-publication">Featured in: {press.pub}</span>
             </div>
             <div className="read-more">
-              Read Article &rarr;
+              <span className="disabled" style={{opacity: 0.5}}>Coming Soon</span>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

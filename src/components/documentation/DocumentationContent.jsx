@@ -21,9 +21,10 @@ const DocumentationContent = () => {
               <div className="docs-nav-group" key={idx}>
                 <h4 className="docs-nav-title">{section.title}</h4>
                 <ul className="docs-nav-links">
-                  {section.links.map((link, lIdx) => (
-                    <li key={lIdx}><a href="#">{link}</a></li>
-                  ))}
+                  {section.links.map((link, lIdx) => {
+                    const slug = '#' + link.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                    return <li key={lIdx}><a href={slug}>{link}</a></li>;
+                  })}
                 </ul>
               </div>
             ))}
@@ -58,11 +59,11 @@ const DocumentationContent = () => {
             <p>Click the <strong>Generate</strong> button on the top toolbar. RebarX will process the forces and rules to create 3D rebar cages for the entire structure. This process takes advantage of multi-core processing and is usually completed in seconds.</p>
 
             <div className="docs-nav-bottom">
-              <a href="#" className="docs-prev">
+              <a href="#installation" className="docs-prev">
                 <span className="label">Previous</span>
                 <span className="title">Installation</span>
               </a>
-              <a href="#" className="docs-next">
+              <a href="#license-activation" className="docs-next">
                 <span className="label">Next</span>
                 <span className="title">License Activation</span>
               </a>
