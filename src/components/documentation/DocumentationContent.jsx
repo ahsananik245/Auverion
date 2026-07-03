@@ -21,9 +21,19 @@ const DocumentationContent = () => {
               <div className="docs-nav-group" key={idx}>
                 <h4 className="docs-nav-title">{section.title}</h4>
                 <ul className="docs-nav-links">
+                  {/* Placeholder navigation for future documentation pages */}
                   {section.links.map((link, lIdx) => {
                     const slug = '#' + link.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-                    return <li key={lIdx}><a href={slug}>{link}</a></li>;
+                    if (link === 'Quick Start Guide') {
+                      return <li key={lIdx}><a href={slug} className="active">{link}</a></li>;
+                    }
+                    return (
+                      <li key={lIdx}>
+                        <span className="disabled" style={{ opacity: 0.5, cursor: 'not-allowed' }}>
+                          {link} (Coming Soon)
+                        </span>
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
@@ -37,7 +47,7 @@ const DocumentationContent = () => {
           </div>
           
           <article className="docs-content">
-            <h1>Quick Start Guide</h1>
+            <h1 id="quick-start-guide">Quick Start Guide</h1>
             <p className="docs-lead">Get up and running with RebarX in under 10 minutes. This guide walks you through your first structural model import and reinforcement generation.</p>
             
             <hr className="docs-divider" />
@@ -59,14 +69,14 @@ const DocumentationContent = () => {
             <p>Click the <strong>Generate</strong> button on the top toolbar. RebarX will process the forces and rules to create 3D rebar cages for the entire structure. This process takes advantage of multi-core processing and is usually completed in seconds.</p>
 
             <div className="docs-nav-bottom">
-              <a href="#installation" className="docs-prev">
+              <span className="docs-prev disabled" style={{opacity: 0.5, cursor: 'not-allowed'}}>
                 <span className="label">Previous</span>
-                <span className="title">Installation</span>
-              </a>
-              <a href="#license-activation" className="docs-next">
+                <span className="title">Installation (Coming Soon)</span>
+              </span>
+              <span className="docs-next disabled" style={{opacity: 0.5, cursor: 'not-allowed'}}>
                 <span className="label">Next</span>
-                <span className="title">License Activation</span>
-              </a>
+                <span className="title">License Activation (Coming Soon)</span>
+              </span>
             </div>
           </article>
         </main>

@@ -137,6 +137,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Accessibility Focus Ring (Chapter 42) */
 :focus {
   outline: none; /* Remove default browser outline */
