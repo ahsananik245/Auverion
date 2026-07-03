@@ -4,7 +4,7 @@ import './PressContent.css';
 const pressReleases = [
   { date: "October 12, 2026", title: "Auverion Secures $150M Series D to Expand AI Capabilities", pub: "TechCrunch" },
   { date: "August 04, 2026", title: "Auverion Named Leader in Gartner Magic Quadrant for App Platforms", pub: "Gartner Press" },
-  { date: "May 22, 2026", title: "Introducing RebarX: The Next Generation React Framework", pub: "Auverion Blog" },
+  { date: "May 22, 2026", title: "Introducing RebarX Beta: The Next Generation Detailing Automation Tool", pub: "Auverion Blog" },
   { date: "January 15, 2026", title: "Auverion Achieves 100% Carbon Neutrality Ahead of Schedule", pub: "Forbes" },
 ];
 

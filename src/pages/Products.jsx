@@ -13,7 +13,7 @@ import FAQ from '../components/home/FAQ';
 const productFaqs = [
   {
     q: 'Which products are available today?',
-    a: 'RebarX is currently available for full commercial use. SteelX is in beta and accessible by request.'
+    a: 'RebarX is currently in closed beta and accessible by request. SteelX is in beta and accessible by request.'
   },
   {
     q: 'Can I use one product without the others?',
@@ -25,7 +25,7 @@ const productFaqs = [
   },
   {
     q: 'Is there a bundle discount?',
-    a: 'We offer an Enterprise Suite license which includes access to all current and future desktop products at a single unified rate.'
+    a: 'Enterprise Suite licensing will be available upon full commercial release. Beta users currently have free access.'
   }
 ];
 

@@ -3,16 +3,16 @@ import './ProductRoadmap.css';
 
 const roadmapData = [
   {
-    date: 'Q3 2026',
-    title: 'RebarX V1.0',
-    desc: 'Initial release of RebarX with native ETABS integration and 2D drawing generation.',
+    date: 'Q1 2026',
+    title: 'RebarX Closed Alpha',
+    desc: 'Initial testing of RebarX with native ETABS integration and 2D drawing generation.',
     status: 'past',
     position: 'top'
   },
   {
-    date: 'Q4 2026',
-    title: 'SteelX Beta',
-    desc: 'Early access release for intelligent steel connection design.',
+    date: 'Q3 2026',
+    title: 'RebarX Beta',
+    desc: 'Current closed beta for early access partners.',
     status: 'current',
     position: 'bottom'
   },

@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
 import './PricingTiers.css';
 
 const PricingTiers = () => {
@@ -33,7 +34,7 @@ const PricingTiers = () => {
               </div>
             </div>
             <div className="pt-button">
-              <Button variant="ghost" size="large" style={{width: '100%'}}>Verify Student Status</Button>
+              <Button variant="ghost" size="large" as={Link} to="/download" style={{width: '100%'}}>Join Waitlist</Button>
             </div>
           </div>
           
@@ -66,7 +67,7 @@ const PricingTiers = () => {
               </div>
             </div>
             <div className="pt-button">
-              <Button variant="primary" size="large" style={{width: '100%'}}>Start 14-Day Free Trial</Button>
+              <Button variant="primary" size="large" as={Link} to="/download" style={{width: '100%'}}>Get Early Access</Button>
             </div>
           </div>
           
@@ -98,7 +99,7 @@ const PricingTiers = () => {
               </div>
             </div>
             <div className="pt-button">
-              <Button variant="ghost" size="large" style={{width: '100%'}}>Contact Sales</Button>
+              <Button variant="ghost" size="large" as={Link} to="/download" style={{width: '100%'}}>Join Waitlist</Button>
             </div>
           </div>
           

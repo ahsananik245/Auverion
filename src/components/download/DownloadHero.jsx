@@ -5,7 +5,7 @@ const DownloadHero = () => {
   return (
     <section className="download-hero">
       <div className="container">
-        <h1>Download</h1>
+        <h1>Early Access Waitlist</h1>
       </div>
     </section>
   );

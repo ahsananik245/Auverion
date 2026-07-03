@@ -37,8 +37,8 @@ const ProductComparison = () => {
             <thead>
               <tr>
                 <th>Feature</th>
-                <th>RebarX</th>
-                <th>SteelX</th>
+                <th>RebarX (Beta)</th>
+                <th>SteelX (Beta)</th>
                 <th>FoundationX</th>
               </tr>
             </thead>

@@ -24,7 +24,7 @@ const rebarxFaqs = [
   },
   {
     q: 'How does network licensing work?',
-    a: 'Enterprise licenses utilize a floating license manager. You can install RebarX on unlimited machines, and the server will grant access based on your total concurrent seat count.'
+    a: 'Upon full release, Enterprise licenses will utilize a floating license manager. During beta, access is granted via individual beta keys.'
   }
 ];
 
@@ -32,7 +32,7 @@ const RebarX = () => {
   return (
     
     <>
-      <SEO title="RebarX" description="Automate reinforcement detailing from ETABS to Revit with RebarX, our flagship product." />
+      <SEO title="RebarX" description="Automate reinforcement detailing from ETABS to Revit with RebarX, our upcoming flagship product (currently in beta)." />
       <main>
       <RebarXHero />
       <IntegrationHighlight />

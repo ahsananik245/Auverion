@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
 import './PricingSummary.css';
 
 const PricingSummary = () => {
@@ -34,7 +35,7 @@ const PricingSummary = () => {
               </div>
             </div>
             <div className="ps-button">
-              <Button variant="ghost" size="large" style={{width: '100%'}}>Apply Now</Button>
+              <Button variant="ghost" size="large" as={Link} to="/download" style={{width: '100%'}}>Join Waitlist</Button>
             </div>
           </div>
           
@@ -61,7 +62,7 @@ const PricingSummary = () => {
               </div>
             </div>
             <div className="ps-button">
-              <Button variant="primary" size="large" style={{width: '100%'}}>Start Free Trial</Button>
+              <Button variant="primary" size="large" as={Link} to="/download" style={{width: '100%'}}>Get Early Access</Button>
             </div>
           </div>
           
@@ -87,7 +88,7 @@ const PricingSummary = () => {
               </div>
             </div>
             <div className="ps-button">
-              <Button variant="ghost" size="large" style={{width: '100%'}}>Contact Sales</Button>
+              <Button variant="ghost" size="large" as={Link} to="/download" style={{width: '100%'}}>Join Waitlist</Button>
             </div>
           </div>
           
