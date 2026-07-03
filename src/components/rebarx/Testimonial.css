@@ -1,0 +1,49 @@
+.testimonial-section {
+  padding: 160px 0;
+  background-color: var(--bg-secondary);
+  text-align: center;
+  position: relative;
+}
+
+.ts-quote-mark {
+  font-size: 120px;
+  color: var(--accent-blue);
+  opacity: 0.2;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  font-family: serif;
+}
+
+.ts-quote {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+  letter-spacing: -0.01em;
+}
+
+.ts-author {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.ts-role {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .ts-quote {
+    font-size: 28px;
+    padding: 0 20px;
+  }
+}

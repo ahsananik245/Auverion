@@ -1,0 +1,259 @@
+:root {
+  /* Colors - Backgrounds & Surfaces */
+  --bg-primary: #0B1220;
+  --bg-secondary: #111827;
+  --surface: #172338;
+  --surface-elevated: #1C2B43;
+  --bg-modal: #202F4B;
+
+  /* Colors - Accents */
+  --accent-blue: #3B82F6;
+  --accent-blue-hover: #5A9BFF;
+  --accent-blue-pressed: #2563EB;
+  --accent-gold: #F6B93B;
+
+  /* Colors - Semantics */
+  --semantic-success: #22C55E;
+  --semantic-warning: #FACC15;
+  --semantic-error: #EF4444;
+  --semantic-info: #38BDF8;
+  --semantic-disabled: #6B7280;
+
+  /* Colors - Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #D5DEE8;
+  --text-muted: #B7C2D1;
+
+  /* Borders */
+  --border-primary: #26364F;
+  --border-secondary: #314765;
+  --border-divider: rgba(255, 255, 255, 0.06);
+
+  /* Typography Scale */
+  --font-family: 'Inter', 'Segoe UI Variable', sans-serif;
+  --text-hero: 72px; /* Using H1 for hero or keeping custom hero */
+  --text-h1: 64px;
+  --text-h2: 48px;
+  --text-h3: 36px;
+  --text-h4: 28px;
+  --text-h5: 20px;
+  --text-body-large: 20px;
+  --text-body: 18px;
+  --text-small: 16px;
+  --text-caption: 14px;
+  --text-button: 16px;
+  --text-nav: 15px;
+
+  /* Responsive Grid & Spacing */
+  --container-max: 1440px;
+  --container-standard: 1320px;
+  --spacing-section: 120px;
+  --padding-side: 32px;
+  --grid-gutter: 32px;
+}
+
+/* Laptop */
+@media (max-width: 1439px) {
+  :root {
+    --spacing-section: 96px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  :root {
+    --text-h1: 52px;
+    --text-h2: 40px;
+    --text-h3: 32px;
+    --text-h4: 24px;
+    --text-body: 17px;
+    --spacing-section: 72px;
+    --padding-side: 24px;
+    --grid-gutter: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --text-hero: 48px;
+    --text-h1: 40px;
+    --text-h2: 32px;
+    --text-h3: 28px;
+    --text-h4: 22px;
+    --text-body: 16px;
+    --spacing-section: 48px;
+    --padding-side: 16px;
+    --grid-gutter: 16px;
+  }
+}
+  
+:root {
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --lh-headings: 1.2;
+  --lh-paragraphs: 1.6;
+  --lh-lists: 1.7;
+  --lh-captions: 1.5;
+  
+  /* Border Radius */
+  --radius-button: 12px;
+  --radius-input: 10px;
+  --radius-card: 16px;
+  --radius-dialog: 20px;
+  --radius-image: 18px;
+  --radius-badge: 999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.32);
+  
+  
+  /* Motion & Transitions (Chapter 46) */
+  --motion-xs: 80ms;
+  --motion-s: 120ms;
+  --motion-m: 180ms;
+  --motion-l: 240ms;
+  --motion-xl: 300ms;
+  --motion-xxl: 450ms;
+  --motion-loop: 8000ms;
+  
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-fast-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-gentle-entrance: cubic-bezier(0, 0, 0.2, 1);
+  --ease-large-movement: cubic-bezier(0.22, 1, 0.36, 1);
+  
+  --transition-base: var(--motion-m) var(--ease-standard);
+  --transition-fast: var(--motion-s) var(--ease-standard);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Accessibility Focus Ring (Chapter 42) */
+:focus {
+  outline: none; /* Remove default browser outline */
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  font-size: var(--text-body);
+  line-height: var(--lh-paragraphs);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--lh-headings);
+  margin: 0;
+}
+
+.text-hero {
+  font-size: var(--text-hero);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: var(--text-h1); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+h2 { font-size: var(--text-h2); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+h3 { font-size: var(--text-h3); font-weight: var(--font-weight-bold); letter-spacing: -0.02em; }
+h4 { font-size: var(--text-h4); font-weight: var(--font-weight-semibold); letter-spacing: 0; }
+h5 { font-size: var(--text-h5); font-weight: var(--font-weight-semibold); letter-spacing: 0; }
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-blue-hover);
+}
+
+/* Layout Classes */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--padding-side);
+  width: 100%;
+}
+
+.section {
+  padding: var(--spacing-section) 0;
+}
+
+/* Responsive Utilities */
+@media (min-width: 1024px) {
+  .hide-desktop { display: none !important; }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hide-tablet { display: none !important; }
+}
+
+@media (max-width: 767px) {
+  .hide-mobile { display: none !important; }
+}
+
+/* Animation Presets (Chapter 46) */
+.anim-fade-in {
+  animation: fadeIn var(--motion-m) var(--ease-gentle-entrance) forwards;
+}
+
+.anim-slide-up {
+  animation: slideUp var(--motion-m) var(--ease-gentle-entrance) forwards;
+}
+
+.anim-modal-open {
+  animation: modalOpen var(--motion-m) var(--ease-gentle-entrance) forwards;
+}
+
+.anim-page-enter {
+  animation: pageEnter var(--motion-xl) var(--ease-standard) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes modalOpen {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

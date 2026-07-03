@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /account/
+Disallow: /search/
+Disallow: /api/
+
+Sitemap: https://auverion.com/sitemap.xml

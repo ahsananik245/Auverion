@@ -1,0 +1,118 @@
+.workflow-eco-section {
+  padding: 96px 0;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.we-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.we-title {
+  font-size: var(--text-h2);
+  color: var(--text-primary);
+}
+
+.we-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--padding-side);
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding-bottom: 32px;
+  scrollbar-width: none;
+}
+
+.we-container::-webkit-scrollbar {
+  display: none;
+}
+
+.we-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: max-content;
+}
+
+.we-track::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  right: 100px;
+  height: 2px;
+  background-color: var(--border-secondary);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.we-stage-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-right: 64px;
+}
+
+.we-stage-wrapper:last-child {
+  margin-right: 0;
+}
+
+.we-stage {
+  width: 140px;
+  height: 140px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.we-stage:hover {
+  transform: scale(1.1);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.2);
+}
+
+.we-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  transition: color var(--transition-base);
+}
+
+.we-stage:hover .we-icon {
+  color: var(--accent-blue);
+}
+
+.we-stage-title {
+  font-size: 15px;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.we-pulse {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  height: 2px;
+  background-color: var(--accent-blue);
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 0;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+  animation: ecoPulse 6s infinite linear;
+}
+
+@keyframes ecoPulse {
+  0% { width: 0; left: 100px; }
+  50% { width: 100%; left: 100px; }
+  50.1% { width: 0; left: 100%; }
+  100% { width: 0; left: 100%; }
+}

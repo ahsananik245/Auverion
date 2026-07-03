@@ -1,0 +1,102 @@
+.installation-guide {
+  padding: 96px 0;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+}
+
+.ig-section-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.ig-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 64px auto;
+}
+
+/* Timeline Line */
+.ig-timeline::before {
+  content: '';
+  position: absolute;
+  top: 70px; /* Half of card height (140/2) */
+  left: 80px;
+  right: 80px;
+  height: 2px;
+  background-color: var(--border-primary);
+  z-index: 1;
+}
+
+.ig-step {
+  position: relative;
+  z-index: 2;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ig-step-card {
+  width: 160px;
+  height: 140px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.ig-step:hover .ig-step-card {
+  border-color: var(--accent-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.ig-step-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent-blue);
+  margin-bottom: 12px;
+}
+
+.ig-step-title {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.ig-step-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.ig-actions {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .ig-timeline {
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
+  .ig-timeline::before {
+    display: none;
+  }
+}

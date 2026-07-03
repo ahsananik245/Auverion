@@ -1,0 +1,28 @@
+.reveal-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+.reveal-wrapper.is-revealed {
+  animation: scrollReveal var(--motion-xxl) var(--ease-gentle-entrance) forwards;
+}
+
+@keyframes scrollReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}

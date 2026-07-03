@@ -1,0 +1,108 @@
+.previous-versions {
+  padding-bottom: 96px;
+  background-color: var(--surface-elevated);
+}
+
+.pv-section-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 32px;
+}
+
+.pv-table-container {
+  overflow-x: auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+}
+
+.pv-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pv-table th, .pv-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-primary);
+  white-space: nowrap;
+}
+
+.pv-table th {
+  background-color: var(--bg-secondary);
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pv-table tbody tr {
+  transition: background-color var(--transition-base);
+}
+
+.pv-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.pv-table tbody tr:last-child th,
+.pv-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pv-version {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.pv-date, .pv-size {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.pv-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+}
+
+.pv-status.supported {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.pv-status.maintenance {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.pv-status.eos {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.pv-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.supported .pv-status-dot { background-color: #10b981; }
+.maintenance .pv-status-dot { background-color: #f59e0b; }
+.eos .pv-status-dot { background-color: #ef4444; }
+
+.pv-link {
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.pv-link:hover {
+  text-decoration: underline;
+}

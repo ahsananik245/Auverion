@@ -1,0 +1,144 @@
+.known-issues {
+  padding-bottom: 96px;
+  background-color: var(--surface-elevated);
+}
+
+.ki-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.ki-section-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.ki-search {
+  position: relative;
+  width: 300px;
+}
+
+.ki-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.ki-search-input {
+  width: 100%;
+  padding: 10px 16px 10px 40px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.ki-search-input:focus {
+  border-color: var(--accent-blue);
+}
+
+.ki-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ki-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ki-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ki-issue-title {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.ki-status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.ki-status.open {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.ki-status.resolved {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.ki-status.critical {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.ki-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.ki-detail-row {
+  display: flex;
+  gap: 12px;
+}
+
+.ki-detail-label {
+  flex: 0 0 120px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ki-detail-value {
+  flex: 1;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .ki-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .ki-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ki-search {
+    width: 100%;
+  }
+}

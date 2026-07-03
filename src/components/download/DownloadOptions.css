@@ -1,0 +1,79 @@
+.download-options {
+  padding-bottom: 96px;
+  background-color: var(--bg-primary);
+}
+
+.do-section-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 32px;
+}
+
+.do-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.do-card {
+  width: 340px;
+  height: 260px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+
+.do-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.do-card-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  transition: color var(--transition-base);
+}
+
+.do-card:hover .do-card-icon {
+  color: var(--accent-blue);
+}
+
+.do-card-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.do-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.do-card-footer {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1100px) {
+  .do-card {
+    flex: 1;
+    min-width: 300px;
+  }
+}

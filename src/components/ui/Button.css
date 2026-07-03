@@ -1,0 +1,68 @@
+.auverion-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: var(--font-family);
+  font-size: var(--text-button);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-button);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform var(--motion-s) var(--ease-standard),
+              background-color var(--motion-s) var(--ease-standard),
+              box-shadow var(--motion-s) var(--ease-standard),
+              color var(--motion-s) var(--ease-standard),
+              border-color var(--motion-s) var(--ease-standard);
+  height: 44px;
+  padding: 0 24px;
+  outline: none;
+}
+
+/* Primary Blue Button */
+.auverion-btn.primary {
+  background-color: var(--accent-blue);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.auverion-btn.primary:hover {
+  background-color: #4b8df7; /* Brightens approx 2% */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.auverion-btn.primary:active {
+  background-color: var(--accent-blue-pressed);
+  transform: scale(0.98);
+  transition-duration: var(--motion-xs);
+  box-shadow: none;
+}
+
+/* Ghost Button */
+.auverion-btn.ghost {
+  background-color: transparent;
+  border-color: var(--border-secondary);
+  color: var(--text-primary);
+}
+
+.auverion-btn.ghost:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background-color: rgba(255, 255, 255, 0.08); /* 8% opacity */
+  transform: none; /* explicitly no scale/translate */
+}
+
+.auverion-btn.ghost:active {
+  transition-duration: var(--motion-xs);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Size Variants */
+.auverion-btn.large {
+  height: 52px;
+  border-radius: 14px;
+  padding: 0 32px;
+  font-size: 16px;
+}

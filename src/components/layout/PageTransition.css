@@ -1,0 +1,9 @@
+.page-transition-wrapper {
+  animation: pageEnter var(--motion-xl) var(--ease-standard) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-wrapper {
+    animation: none;
+  }
+}

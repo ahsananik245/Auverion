@@ -1,0 +1,196 @@
+.interactive-features {
+  padding: 120px 0;
+  background-color: var(--bg-secondary);
+}
+
+.if-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.if-title {
+  font-size: var(--text-h2);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.if-tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.if-tabs {
+  display: inline-flex;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: 999px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.if-tab {
+  padding: 12px 32px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  user-select: none;
+}
+
+.if-tab:hover {
+  color: var(--text-primary);
+}
+
+.if-tab.active {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.if-content {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 64px;
+  box-shadow: var(--shadow-lg);
+  min-height: 500px;
+}
+
+.if-left {
+  flex: 0 0 40%;
+}
+
+.if-content-title {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.if-content-desc {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.if-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.if-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.if-list-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.if-list-text {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.if-right {
+  flex: 1;
+}
+
+.if-visual-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #0b111a;
+  border: 1px solid var(--border-secondary);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.if-visual-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(11, 17, 26, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+.if-play-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.if-play-button:hover {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  transform: scale(1.1);
+}
+
+.if-vp-header {
+  height: 32px;
+  background-color: var(--surface-elevated);
+  border-bottom: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.if-vp-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Specific animations for the placeholder body based on active tab could go here */
+.if-vp-graphics {
+  width: 80%;
+  height: 80%;
+  border: 1px dashed var(--accent-blue);
+  opacity: 0.3;
+  border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+  .if-content {
+    flex-direction: column;
+    padding: 32px;
+  }
+  .if-left, .if-right {
+    flex: 1;
+    width: 100%;
+  }
+  .if-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

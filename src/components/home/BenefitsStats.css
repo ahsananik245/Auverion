@@ -1,0 +1,115 @@
+.benefits-section {
+  padding: 96px 0;
+  background-color: var(--bg-primary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 96px;
+}
+
+.benefit-card {
+  height: 420px;
+  background-color: var(--surface);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-primary);
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--accent-blue);
+  margin-bottom: auto;
+}
+
+.benefit-stat {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.benefit-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.benefit-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Statistics Section */
+.stats-section {
+  background-color: var(--surface-elevated);
+  padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-primary);
+}
+
+.stats-bg-blueprint {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+.stats-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-item-number {
+  font-size: 54px;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.stat-item-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 992px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefit-card {
+    height: auto;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

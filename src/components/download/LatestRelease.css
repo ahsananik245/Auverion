@@ -1,0 +1,123 @@
+.latest-release {
+  padding: 96px 0;
+  background-color: var(--bg-primary);
+}
+
+.lr-container {
+  display: flex;
+  gap: 32px;
+}
+
+.lr-left {
+  flex: 0 0 40%;
+}
+
+.lr-right {
+  flex: 0 0 60%;
+}
+
+.lr-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  height: 100%;
+}
+
+.lr-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.lr-version-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lr-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.lr-detail-label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.lr-detail-value {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+/* Scrollable What's New */
+.lr-scroll-area {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+/* Custom Scrollbar */
+.lr-scroll-area::-webkit-scrollbar {
+  width: 6px;
+}
+.lr-scroll-area::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+.lr-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+.lr-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.lr-update-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lr-update-type {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  height: fit-content;
+}
+
+.type-new { background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.type-improved { background-color: rgba(16, 185, 129, 0.1); color: #10b981; }
+.type-fixed { background-color: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+.type-security { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+.lr-update-content h4 {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.lr-update-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .lr-container {
+    flex-direction: column;
+  }
+}

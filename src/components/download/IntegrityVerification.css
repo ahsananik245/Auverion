@@ -1,0 +1,131 @@
+.integrity-verification {
+  padding: 96px 0;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+}
+
+.iv-card {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 48px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.iv-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #10b981; /* Green */
+}
+
+.iv-title {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.iv-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.iv-features {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.iv-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.iv-feature-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iv-feature-text {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.iv-code-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.iv-code-block {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #d4d4d4;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.iv-copy-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-base);
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+.iv-copy-btn:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .iv-card {
+    padding: 32px 24px;
+  }
+  .iv-features {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .iv-code-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .iv-copy-btn {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+}

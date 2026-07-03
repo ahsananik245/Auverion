@@ -1,0 +1,88 @@
+.comparison-section {
+  padding: 96px 0;
+  background-color: var(--bg-primary);
+}
+
+.pc-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.pc-title {
+  font-size: var(--text-h2);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.pc-desc {
+  font-size: var(--text-body-large);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pc-table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-md);
+}
+
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px; /* forces horizontal scroll on small screens */
+}
+
+.pc-table th, 
+.pc-table td {
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.pc-table th {
+  background-color: var(--surface-elevated);
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-secondary);
+}
+
+.pc-table th:first-child {
+  text-align: left;
+  width: 40%;
+}
+
+.pc-table td:first-child {
+  text-align: left;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.pc-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pc-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.pc-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--accent-blue);
+}
+
+.pc-dash {
+  color: var(--text-muted);
+  font-weight: bold;
+}

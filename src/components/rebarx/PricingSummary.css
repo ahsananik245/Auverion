@@ -1,0 +1,122 @@
+.pricing-section {
+  padding: 120px 0;
+  background-color: var(--bg-primary);
+}
+
+.ps-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.ps-title {
+  font-size: var(--text-h2);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ps-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.ps-card.popular {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  transform: scale(1.02);
+}
+
+.ps-popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--accent-blue);
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ps-tier {
+  font-size: 20px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.ps-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  min-height: 42px;
+}
+
+.ps-price-block {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.ps-price {
+  font-size: 48px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.ps-period {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.ps-features {
+  flex: 1;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ps-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.ps-check {
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.ps-button {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .ps-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  .ps-card.popular {
+    transform: none;
+  }
+}

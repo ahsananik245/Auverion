@@ -1,0 +1,129 @@
+.update-channels {
+  padding-bottom: 96px;
+  background-color: var(--surface-elevated);
+}
+
+.uc-section-title {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 32px;
+}
+
+.uc-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.uc-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  padding: 24px 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  transition: border-color var(--transition-base);
+}
+
+.uc-card:hover {
+  border-color: var(--border-secondary);
+}
+
+.uc-header {
+  flex: 0 0 200px;
+}
+
+.uc-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.uc-badge.stable {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.uc-badge.preview {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.uc-badge.beta {
+  background-color: rgba(156, 163, 175, 0.1);
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.uc-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.uc-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.uc-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.uc-details {
+  display: flex;
+  gap: 32px;
+}
+
+.uc-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.uc-detail-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.uc-detail-value {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.uc-action {
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+@media (max-width: 992px) {
+  .uc-card {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .uc-header {
+    flex: none;
+  }
+  .uc-action {
+    align-self: flex-start;
+  }
+  .uc-details {
+    flex-wrap: wrap;
+  }
+}

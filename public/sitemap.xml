@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://auverion.com/sitemap-products.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://auverion.com/sitemap-docs.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://auverion.com/sitemap-blog.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://auverion.com/sitemap-academy.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://auverion.com/sitemap-community.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://auverion.com/sitemap-company.xml</loc>
+  </sitemap>
+</sitemapindex>
