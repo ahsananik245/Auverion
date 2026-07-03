@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/seo/SEO';
 import PricingHero from '../components/pricing/PricingHero';
 import PricingTiers from '../components/pricing/PricingTiers';
 import FAQ from '../components/home/FAQ';
@@ -24,13 +25,18 @@ const pricingFaqs = [
 
 const Pricing = () => {
   return (
-    <main>
+    
+    <>
+      <SEO title="Pricing" description="Simple, transparent pricing for Auverion RebarX. Professional and Enterprise plans available." />
+      <main>
       <PricingHero />
       <PricingTiers />
       <FAQ faqsData={pricingFaqs} />
     </main>
+    </>
   );
 };
 
 export default Pricing;
+
 

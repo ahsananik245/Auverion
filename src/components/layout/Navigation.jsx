@@ -48,13 +48,7 @@ const Navigation = () => {
             </div>
 
             <div className="nav-actions hide-mobile hide-tablet">
-              <button className="nav-search" aria-label="Search">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </button>
-              <Button variant="ghost">Login</Button>
+              <Button variant="ghost" as={Link} to="/company/contact">Contact Us</Button>
               <Button variant="primary">Download</Button>
             </div>
 
@@ -76,9 +70,7 @@ const Navigation = () => {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu-overlay ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
-          <div className="mobile-search-bar">
-            <input type="text" placeholder="Search Auverion..." />
-          </div>
+
           <div className="mobile-nav-links">
             <Link to="/products" onClick={closeMobileMenu}>Products</Link>
             <Link to="/solutions" onClick={closeMobileMenu}>Solutions</Link>
@@ -90,7 +82,7 @@ const Navigation = () => {
             <Link to="/support" onClick={closeMobileMenu}>Support</Link>
           </div>
           <div className="mobile-nav-actions">
-            <Button variant="ghost" onClick={closeMobileMenu} style={{width: '100%', marginBottom: '16px'}}>Login</Button>
+            <Button variant="ghost" as={Link} to="/company/contact" onClick={closeMobileMenu} style={{width: '100%', marginBottom: '16px'}}>Contact Us</Button>
             <Button variant="primary" onClick={closeMobileMenu} style={{width: '100%'}}>Download Now</Button>
           </div>
         </div>

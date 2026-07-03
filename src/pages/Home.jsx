@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <SEO 
-        title="Auverion" 
+        title="" 
         description="Auverion builds next-generation structural engineering software, helping engineers automate workflows and design with confidence." 
       />
       <main>

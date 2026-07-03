@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/seo/SEO';
 import RebarXHero from '../components/rebarx/RebarXHero';
 import Button from '../components/ui/Button';
 import InteractiveFeatures from '../components/rebarx/InteractiveFeatures';
@@ -29,7 +30,10 @@ const rebarxFaqs = [
 
 const RebarX = () => {
   return (
-    <main>
+    
+    <>
+      <SEO title="RebarX" description="Automate reinforcement detailing from ETABS to Revit with RebarX, our flagship product." />
+      <main>
       <RebarXHero />
       <IntegrationHighlight />
       <InteractiveFeatures />
@@ -38,8 +42,10 @@ const RebarX = () => {
       <PricingSummary />
       <FAQ faqsData={rebarxFaqs} />
     </main>
+    </>
   );
 };
 
 export default RebarX;
+
 

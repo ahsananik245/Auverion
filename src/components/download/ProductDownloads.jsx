@@ -50,7 +50,7 @@ const ProductDownloads = () => {
                 </div>
                 <h3 className="pd-title">{item.name}</h3>
                 <div className="pd-meta">
-                  Version {item.version} &bull; Released {item.date} &bull; <a href="#">Release Notes</a>
+                  Version {item.version} &bull; Released {item.date} &bull; <span className="disabled" style={{opacity: 0.7}}>Release Notes (Coming Soon)</span>
                 </div>
               </div>
               <div className="pd-right">

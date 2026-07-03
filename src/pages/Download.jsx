@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/seo/SEO';
 import DownloadHero from '../components/download/DownloadHero';
 import Button from '../components/ui/Button';
 import LatestRelease from '../components/download/LatestRelease';
@@ -15,7 +16,10 @@ import DownloadHelp from '../components/download/DownloadHelp';
 
 const Download = () => {
   return (
-    <main>
+    
+    <>
+      <SEO title="Download" description="Download the latest version of Auverion RebarX for Windows. Digitally signed and verified." />
+      <main>
       <DownloadHero />
       <LatestRelease />
       <DownloadOptions />
@@ -29,8 +33,10 @@ const Download = () => {
       <DownloadFAQ />
       <DownloadHelp />
     </main>
+    </>
   );
 };
 
 export default Download;
+
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/seo/SEO';
 import ProductsHero from '../components/products/ProductsHero';
 import ProductEcosystem from '../components/products/ProductEcosystem';
 import FeaturedProduct from '../components/products/FeaturedProduct';
@@ -30,7 +31,10 @@ const productFaqs = [
 
 const Products = () => {
   return (
-    <main>
+    
+    <>
+      <SEO title="Products" description="Explore the Auverion Suite — RebarX, SteelX, FoundationX and the Developer SDK." />
+      <main>
       <ProductsHero />
       <ProductEcosystem />
       <FeaturedProduct />
@@ -41,8 +45,10 @@ const Products = () => {
       <ProductRoadmap />
       <FAQ faqsData={productFaqs} />
     </main>
+    </>
   );
 };
 
 export default Products;
+
 

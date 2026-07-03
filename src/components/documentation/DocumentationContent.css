@@ -1,0 +1,223 @@
+.docs-page {
+  padding: 60px 0 var(--spacing-section);
+  border-top: 1px solid var(--border-primary);
+}
+
+.docs-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 1023px) {
+  .docs-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .docs-sidebar {
+    display: none; /* In a real app, this would be a mobile drawer */
+  }
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 20px;
+}
+
+/* Custom scrollbar for sidebar */
+.docs-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.docs-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.docs-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-secondary);
+  border-radius: 4px;
+}
+
+.docs-search {
+  margin-bottom: 32px;
+}
+
+.docs-search input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-input);
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+.docs-search input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  background: var(--surface);
+}
+
+.docs-nav-group {
+  margin-bottom: 32px;
+}
+
+.docs-nav-title {
+  font-size: var(--text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.docs-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.docs-nav-links li {
+  margin-bottom: 8px;
+}
+
+.docs-nav-links a {
+  color: var(--text-secondary);
+  font-size: var(--text-nav);
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-left: -12px;
+}
+
+.docs-nav-links a:hover,
+.docs-nav-links a.active {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-blue);
+}
+
+.docs-breadcrumbs {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.docs-breadcrumbs span {
+  margin: 0 8px;
+}
+
+.docs-breadcrumbs span:first-child {
+  margin-left: 0;
+}
+
+.docs-breadcrumbs .active {
+  color: var(--accent-blue);
+}
+
+.docs-content {
+  max-width: 800px;
+}
+
+.docs-content h1 {
+  margin-bottom: 16px;
+  font-size: var(--text-h2);
+}
+
+.docs-lead {
+  font-size: var(--text-body-large);
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.docs-divider {
+  border: none;
+  border-top: 1px solid var(--border-primary);
+  margin: 40px 0;
+}
+
+.docs-content h2 {
+  font-size: var(--text-h3);
+  margin: 40px 0 16px;
+}
+
+.docs-content p {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.docs-code-block {
+  background: #000;
+  padding: 20px;
+  border-radius: var(--radius-input);
+  border: 1px solid var(--border-primary);
+  margin: 24px 0;
+  font-family: monospace;
+  color: var(--semantic-info);
+}
+
+.docs-tip {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-input);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin: 32px 0;
+}
+
+.docs-tip svg {
+  width: 24px;
+  height: 24px;
+  color: var(--semantic-success);
+  margin-right: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.docs-tip span {
+  color: var(--text-primary);
+}
+
+.docs-nav-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-primary);
+}
+
+.docs-nav-bottom a {
+  padding: 24px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.docs-nav-bottom a:hover {
+  border-color: var(--accent-blue);
+  background: var(--surface);
+}
+
+.docs-nav-bottom .docs-next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.docs-nav-bottom .label {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.docs-nav-bottom .title {
+  font-size: var(--text-h5);
+  color: var(--accent-blue);
+  font-weight: var(--font-weight-semibold);
+}

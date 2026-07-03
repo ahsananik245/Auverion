@@ -10,46 +10,46 @@ const Footer = () => {
           <div>
             <h4 className="footer-heading">Company</h4>
             <ul className="footer-links">
-              <li><a href="#" className="footer-link">About</a></li>
-              <li><a href="#" className="footer-link">Mission</a></li>
-              <li><a href="#" className="footer-link">Team</a></li>
-              <li><a href="#" className="footer-link">Careers</a></li>
-              <li><a href="#" className="footer-link">Contact</a></li>
+              <li><Link to="/company/about" className="footer-link">About</Link></li>
+              <li><Link to="/company/mission" className="footer-link">Mission</Link></li>
+              <li><Link to="/company/team" className="footer-link">Team</Link></li>
+              <li><Link to="/company/careers" className="footer-link">Careers</Link></li>
+              <li><Link to="/company/contact" className="footer-link">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="footer-heading">Products</h4>
             <ul className="footer-links">
-              <li><a href="#" className="footer-link">RebarX</a></li>
-              <li><a href="#" className="footer-link">Future Products</a></li>
-              <li><a href="#" className="footer-link">Product Roadmap</a></li>
+              <li><Link to="/products/rebarx" className="footer-link">RebarX</Link></li>
+              <li><span className="footer-link disabled">Future Products (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Product Roadmap (Coming Soon)</span></li>
             </ul>
           </div>
           <div>
             <h4 className="footer-heading">Resources</h4>
             <ul className="footer-links">
-              <li><a href="#" className="footer-link">Documentation</a></li>
-              <li><a href="#" className="footer-link">Tutorials</a></li>
-              <li><a href="#" className="footer-link">Blog</a></li>
-              <li><a href="#" className="footer-link">Download</a></li>
+              <li><Link to="/documentation" className="footer-link">Documentation</Link></li>
+              <li><span className="footer-link disabled">Tutorials (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Blog (Coming Soon)</span></li>
+              <li><Link to="/download" className="footer-link">Download</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="footer-heading">Support</h4>
             <ul className="footer-links">
-              <li><a href="#" className="footer-link">Knowledge Base</a></li>
-              <li><a href="#" className="footer-link">Ticket</a></li>
-              <li><a href="#" className="footer-link">Community</a></li>
-              <li><a href="#" className="footer-link">Status</a></li>
-              <li><a href="#" className="footer-link">Contact Support</a></li>
+              <li><span className="footer-link disabled">Knowledge Base (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Ticket (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Community (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Status (Coming Soon)</span></li>
+              <li><span className="footer-link disabled">Contact Support (Coming Soon)</span></li>
             </ul>
           </div>
           <div>
             <h4 className="footer-heading">Legal</h4>
             <ul className="footer-links">
-              <li><a href="/company/legal" className="footer-link">Privacy Policy</a></li>
-              <li><a href="/company/legal" className="footer-link">Terms of Service</a></li>
-              <li><a href="/company/legal" className="footer-link">Cookie Policy</a></li>
+              <li><Link to="/company/legal" className="footer-link">Privacy Policy</Link></li>
+              <li><Link to="/company/legal" className="footer-link">Terms of Service</Link></li>
+              <li><Link to="/company/legal" className="footer-link">Cookie Policy</Link></li>
               <li><Link to="/company/accessibility" className="footer-link">Accessibility</Link></li>
             </ul>
           </div>
@@ -71,14 +71,14 @@ const Footer = () => {
               English (US)
             </div>
             <div className="footer-socials">
-              <a href="#" className="social-icon" aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/auverion" className="social-icon" aria-label="LinkedIn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
-              <a href="#" className="social-icon" aria-label="Twitter">
+              <a href="https://x.com/auverion" className="social-icon" aria-label="Twitter">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>

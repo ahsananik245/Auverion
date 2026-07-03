@@ -1,0 +1,35 @@
+.accessibility-content {
+  padding: var(--spacing-section) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.accessibility-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.accessibility-header h2 {
+  margin-bottom: 16px;
+}
+.accessibility-body h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--accent-blue);
+}
+.accessibility-body p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: var(--text-body-large);
+  line-height: var(--lh-lists);
+}
+.accessibility-contact {
+  background: var(--surface-elevated);
+  padding: 32px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-primary);
+  margin-top: 48px;
+  text-align: center;
+}
+.accessibility-contact a {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-h5);
+}

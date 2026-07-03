@@ -43,10 +43,10 @@ const PreviousVersions = () => {
                     </span>
                   </td>
                   <td>
-                    <a href="#" className="pv-link">Release Notes</a>
+                    <span className="pv-link disabled">Coming Soon</span>
                   </td>
                   <td>
-                    <a href="#" className="pv-link">Download Installer</a>
+                    <span className="pv-link disabled">Coming Soon</span>
                   </td>
                 </tr>
               ))}
