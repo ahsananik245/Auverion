@@ -4,7 +4,7 @@ import './ProductDownloads.css';
 
 const downloads = [
   {
-    name: 'RebarX Desktop',
+    name: 'RebarX Plugin for Revit',
     version: 'v1.2.4',
     date: 'June 2026',
     status: 'stable',

@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Does it work Offline?',
-    a: 'Yes, RebarX is a 100% native desktop application. While internet is required for initial activation and occasional updates, day-to-day engineering workflows function completely offline.'
+    a: 'Yes, RebarX operates entirely as a native Revit plugin. While internet is required for initial activation and occasional updates, day-to-day engineering workflows function completely offline within Revit.'
   },
   {
     q: 'How are Updates handled?',

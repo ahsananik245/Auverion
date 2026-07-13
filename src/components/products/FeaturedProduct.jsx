@@ -48,7 +48,7 @@ const FeaturedProduct = () => {
               </div>
               <div>
                 <div className="featured-stat-number">100%</div>
-                <div className="featured-stat-label">Desktop</div>
+                <div className="featured-stat-label">Plugin</div>
               </div>
               <div>
                 <div className="featured-stat-number">Windows</div>

@@ -19,7 +19,7 @@ const capabilities = [
   },
   {
     title: 'EXR Data Integration',
-    desc: 'Built on the proprietary EXR format, allowing lossless transfer of internal forces, moments, and geometry from your analysis software.',
+    desc: 'Built on the proprietary EXR format, seamlessly pulling internal forces, moments, and geometry directly from ETABS into your active Revit session.',
     icon: 'M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4'
   },
   {

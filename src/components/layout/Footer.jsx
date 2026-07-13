@@ -57,6 +57,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="footer-bottom-left">
+            <img src="/logo.png" alt="Auverion" style={{ height: '24px', marginRight: '8px' }} />
             <span>&copy; {new Date().getFullYear()} Auverion. All rights reserved.</span>
             <span>Version 1.0.0</span>
           </div>

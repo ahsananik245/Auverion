@@ -35,7 +35,7 @@ const HeroSection = () => {
             </div>
             <div>
               <div className="hero-stat-number">100%</div>
-              <div className="hero-stat-label">Native Desktop</div>
+              <div className="hero-stat-label">Revit Plugin</div>
             </div>
           </div>
           
