@@ -1,64 +1,47 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { RELEASE_VERSION, RELEASE_DATE, DOWNLOAD_URL } from '../../config/download';
 import './ProductDownloads.css';
 
-const downloads = [
-  {
-    name: 'RebarX Plugin for Revit',
-    version: 'v1.2.4',
-    date: 'June 2026',
-    status: 'stable',
-    os: 'Windows 64-bit'
-  },
-  {
-    name: 'FoundationX',
-    version: 'v1.0.1',
-    date: 'May 2026',
-    status: 'stable',
-    os: 'Windows 64-bit'
-  },
-  {
-    name: 'SteelX',
-    version: 'v0.9.2-beta',
-    date: 'July 2026',
-    status: 'beta',
-    os: 'Windows 64-bit'
-  },
-  {
-    name: 'Auverion License Manager',
-    version: 'v2.1.0',
-    date: 'January 2026',
-    status: 'stable',
-    os: 'Windows / Linux Server'
-  }
-];
+// Single real, current release. Deliberately not a list of multiple
+// "editions" or fictional companion products -- Auverion currently
+// ships exactly one installer (built by build_installer.bat from the
+// Inno Setup script in /installer). If/when real additional products
+// or editions exist, add them here as genuine entries, each with a
+// real version and a real download link -- not placeholders.
+const download = {
+  name: 'RebarX Plugin for Revit',
+  version: RELEASE_VERSION,
+  date: RELEASE_DATE,
+  status: 'stable',
+  os: 'Windows 64-bit',
+  supports: 'Autodesk Revit 2019 - 2026',
+};
 
 const ProductDownloads = () => {
   return (
     <section className="product-downloads">
       <div className="container">
         <div className="pd-container">
-          
-          {downloads.map((item, index) => (
-            <div className="pd-card" key={index}>
-              <div className="pd-left">
-                <div className="pd-badge-row">
-                  <span className={`pd-badge ${item.status}`}>
-                    {item.status === 'stable' ? 'Stable Release' : 'Beta Preview'}
-                  </span>
-                  <span className="pd-badge os">{item.os}</span>
-                </div>
-                <h3 className="pd-title">{item.name}</h3>
-                <div className="pd-meta">
-                  Version {item.version} &bull; Released {item.date} &bull; <span className="disabled" style={{opacity: 0.7}}>Release Notes (Coming Soon)</span>
-                </div>
+          <div className="pd-card">
+            <div className="pd-left">
+              <div className="pd-badge-row">
+                <span className={`pd-badge ${download.status}`}>
+                  {download.status === 'stable' ? 'Stable Release' : 'Beta Preview'}
+                </span>
+                <span className="pd-badge os">{download.os}</span>
               </div>
-              <div className="pd-right">
-                <Button variant="primary" size="large">Download MSI</Button>
+              <h3 className="pd-title">{download.name}</h3>
+              <div className="pd-meta">
+                Version {download.version} &bull; Released {download.date} &bull; {download.supports}
               </div>
             </div>
-          ))}
-          
+            <div className="pd-right">
+              <Button as="a" href={DOWNLOAD_URL} variant="primary" size="large">
+                Download Installer (.exe)
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

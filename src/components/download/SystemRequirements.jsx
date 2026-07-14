@@ -29,7 +29,7 @@ const SystemRequirements = () => {
             </div>
             <div className="sr-property-row">
               <span className="sr-property-label">Storage</span>
-              <span className="sr-property-value">10 GB available space</span>
+              <span className="sr-property-value">200 MB available space (plus Revit itself)</span>
             </div>
             <div className="sr-property-row">
               <span className="sr-property-label">Display</span>
@@ -66,7 +66,7 @@ const SystemRequirements = () => {
             </div>
             <div className="sr-property-row">
               <span className="sr-property-label">Storage</span>
-              <span className="sr-property-value">20 GB NVMe SSD</span>
+              <span className="sr-property-value">500 MB SSD (plus Revit itself)</span>
             </div>
             <div className="sr-property-row">
               <span className="sr-property-label">Display</span>
@@ -98,11 +98,11 @@ const SystemRequirements = () => {
           </div>
           <div className="sr-compat-icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-            ETABS v19 - v21
+            ETABS design export (.exr / CSV)
           </div>
           <div className="sr-compat-icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-            Revit 2022 - 2024
+            Revit 2019 - 2026
           </div>
         </div>
         

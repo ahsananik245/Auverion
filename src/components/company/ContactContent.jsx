@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './ContactContent.css';
+import { FORMSPREE_ENDPOINT } from '../../config/links';
 
 const ContactContent = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     let tempErrors = {};
@@ -20,16 +22,28 @@ const ContactContent = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      setIsSubmitting(true);
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false);
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    setSubmitError('');
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(e.target),
+      });
+      if (response.ok) {
         setIsSuccess(true);
         setFormData({ name: '', email: '', message: '' });
-      }, 1500);
+      } else {
+        setSubmitError("Something went wrong sending that. Please try again, or email us directly.");
+      }
+    } catch (err) {
+      setSubmitError("Couldn't reach the server. Check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -61,10 +75,16 @@ const ContactContent = () => {
               Thanks for reaching out! We'll get back to you shortly.
             </div>
           )}
+          {submitError && (
+            <div className="form-error">
+              {submitError}
+            </div>
+          )}
           <div className="form-group">
             <label>Name</label>
             <input 
               type="text" 
+              name="name"
               className="form-control" 
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -76,6 +96,7 @@ const ContactContent = () => {
             <label>Email</label>
             <input 
               type="email" 
+              name="email"
               className="form-control" 
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -86,6 +107,7 @@ const ContactContent = () => {
           <div className="form-group">
             <label>Message</label>
             <textarea 
+              name="message"
               className="form-control" 
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}

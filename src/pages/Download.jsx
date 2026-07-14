@@ -1,17 +1,23 @@
 import React from 'react';
 import SEO from '../components/seo/SEO';
 import DownloadHero from '../components/download/DownloadHero';
-import WaitlistForm from '../components/download/WaitlistForm';
+import ProductDownloads from '../components/download/ProductDownloads';
+import SystemRequirements from '../components/download/SystemRequirements';
+import ChecksumVerification from '../components/download/ChecksumVerification';
 
 const Download = () => {
   return (
-    
     <>
-      <SEO title="Get Early Access" description="RebarX is currently in closed beta. Join the waitlist to secure your spot for early access." />
+      <SEO
+        title="Download RebarX"
+        description="Download Auverion RebarX, the Revit add-in that automates column and beam rebar detailing from ETABS design results. Free 14-day trial."
+      />
       <main>
-      <DownloadHero />
-      <WaitlistForm />
-    </main>
+        <DownloadHero />
+        <ProductDownloads />
+        <ChecksumVerification />
+        <SystemRequirements />
+      </main>
     </>
   );
 };

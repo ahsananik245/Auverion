@@ -83,6 +83,14 @@ textarea.form-control {
   border-radius: var(--radius-input);
   margin-bottom: 24px;
 }
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--semantic-error);
+  color: var(--semantic-error);
+  padding: 16px;
+  border-radius: var(--radius-input);
+  margin-bottom: 24px;
+}
 .error-text {
   color: var(--semantic-error);
   font-size: var(--text-caption);

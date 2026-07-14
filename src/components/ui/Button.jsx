@@ -6,15 +6,16 @@ const Button = ({
   variant = 'primary', 
   size = 'normal', 
   className = '', 
+  as: Component = 'button',
   ...props 
 }) => {
   return (
-    <button 
+    <Component 
       className={`auverion-btn ${variant} ${size === 'large' ? 'large' : ''} ${className}`}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
 

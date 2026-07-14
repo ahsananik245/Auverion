@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { FORMSPREE_ENDPOINT } from '../../config/links';
 
 const WaitlistForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', role: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     let tempErrors = {};
@@ -18,16 +20,28 @@ const WaitlistForm = () => {
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      setIsSubmitting(true);
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false);
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    setSubmitError('');
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(e.target),
+      });
+      if (response.ok) {
         setIsSuccess(true);
         setFormData({ name: '', email: '', role: '' });
-      }, 1500);
+      } else {
+        setSubmitError("Something went wrong sending that. Please try again, or email us directly.");
+      }
+    } catch (err) {
+      setSubmitError("Couldn't reach the server. Check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -49,10 +63,16 @@ const WaitlistForm = () => {
                   You're on the list! We'll be in touch soon with your early access invitation.
                 </div>
               )}
+              {submitError && (
+                <div className="form-error" style={{ background: 'rgba(239, 68, 68, 0.1)', color: 'var(--semantic-error)', padding: '16px', borderRadius: '8px', marginBottom: '24px', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+                  {submitError}
+                </div>
+              )}
               <div className="form-group" style={{ marginBottom: '20px' }}>
                 <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: 'var(--text-secondary)' }}>Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   className="form-control" 
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -65,6 +85,7 @@ const WaitlistForm = () => {
                 <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: 'var(--text-secondary)' }}>Email</label>
                 <input 
                   type="email" 
+                  name="email"
                   className="form-control" 
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -77,6 +98,7 @@ const WaitlistForm = () => {
                 <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: 'var(--text-secondary)' }}>Role (Optional)</label>
                 <input 
                   type="text" 
+                  name="role"
                   className="form-control" 
                   value={formData.role}
                   onChange={(e) => setFormData({...formData, role: e.target.value})}

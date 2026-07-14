@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../ui/Button';
 import { Link } from 'react-router-dom';
+import { REBARX_CHECKOUT_URL } from '../../config/links';
 import './PricingTiers.css';
 
 const PricingTiers = () => {
@@ -67,7 +68,7 @@ const PricingTiers = () => {
               </div>
             </div>
             <div className="pt-button">
-              <Button variant="primary" size="large" as={Link} to="/download" style={{width: '100%'}}>Get Early Access</Button>
+              <Button variant="primary" size="large" as="a" href={REBARX_CHECKOUT_URL} target="_blank" rel="noopener noreferrer" style={{width: '100%'}}>Buy Now</Button>
             </div>
           </div>
           
