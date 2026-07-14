@@ -32,7 +32,7 @@ const RebarX = () => {
   return (
     
     <>
-      <SEO title="RebarX" description="Automate reinforcement detailing from ETABS to Revit with RebarX, our upcoming flagship product (currently in beta)." />
+      <SEO title="RebarX — Revit Plugin" description="RebarX is a native Revit plugin that automates structural reinforcement detailing from ETABS directly inside your BIM environment. No standalone app required." />
       <main>
       <RebarXHero />
       <IntegrationHighlight />
