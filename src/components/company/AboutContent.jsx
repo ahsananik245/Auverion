@@ -6,32 +6,36 @@ const AboutContent = () => {
     <div className="about-content container">
       <section className="about-story">
         <div className="about-text">
-          <h2 className="anim-fade-in">Our Founding Narrative</h2>
-          <p className="anim-fade-in">Founded in 2026, Auverion was born from a singular vision: to democratize advanced technology for businesses worldwide. What started as a small team of passionate engineers has grown into a global leader in AI-driven solutions.</p>
-          <p className="anim-fade-in">We believe that software should be intuitive, powerful, and accessible. Our journey is fueled by a relentless commitment to innovation and a deep understanding of our customers' needs.</p>
+          <h2 className="anim-fade-in">Why We're Building This</h2>
+          <p className="anim-fade-in">
+            Auverion was started in 2026 to solve a specific, painful problem in structural engineering: the hours of manual, repetitive work required to go from a structural analysis model to finished reinforcement drawings and schedules.
+          </p>
+          <p className="anim-fade-in">
+            RebarX is the first product — a Revit add-in that reads ETABS design outputs and automates the reinforcement modeling, detailing, and drawing generation workflow. We're early-stage, focused, and building in public.
+          </p>
         </div>
         <div className="about-image anim-slide-up">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Auverion Team Collaboration" />
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Structural engineering blueprints" />
         </div>
       </section>
 
       <section className="about-values-section">
-        <h2 className="text-center anim-slide-up" style={{ marginBottom: '48px' }}>Our Core Values</h2>
+        <h2 className="text-center anim-slide-up" style={{ marginBottom: '48px' }}>What We Care About</h2>
         <div className="about-values">
           <div className="value-card anim-slide-up">
-            <div className="value-icon">💡</div>
-            <h3>Innovation First</h3>
-            <p>We consistently push the boundaries of what's possible, embracing new ideas and emerging technologies to deliver state-of-the-art solutions.</p>
+            <div className="value-icon">🎯</div>
+            <h3>Precision</h3>
+            <p>Structural software has zero tolerance for error. Every output RebarX generates is designed to be verifiable and code-compliant.</p>
           </div>
           <div className="value-card anim-slide-up" style={{ animationDelay: '100ms' }}>
-            <div className="value-icon">🤝</div>
-            <h3>Customer Success</h3>
-            <p>Our customers' growth is our growth. We are dedicated to providing unparalleled support and building tools that genuinely empower users.</p>
+            <div className="value-icon">⚡</div>
+            <h3>Speed Without Shortcuts</h3>
+            <p>Automation should make engineers faster — not replace their judgment. We automate the repetitive, not the critical.</p>
           </div>
           <div className="value-card anim-slide-up" style={{ animationDelay: '200ms' }}>
-            <div className="value-icon">🌍</div>
-            <h3>Global Inclusivity</h3>
-            <p>We build for everyone. Diversity in our team and our user base drives better, more accessible, and more empathetic product design.</p>
+            <div className="value-icon">🔍</div>
+            <h3>Transparency</h3>
+            <p>We're an early-stage company. We say what we've built, what we're working on, and what doesn't exist yet — no exaggeration.</p>
           </div>
         </div>
       </section>
