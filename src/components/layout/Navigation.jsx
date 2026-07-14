@@ -33,7 +33,7 @@ const Navigation = () => {
         <div className="container">
           <div className="nav-content">
             <Link to="/" className="nav-logo" onClick={closeMobileMenu}>
-              <img src="/logo.png" alt="Auverion" style={{ height: '32px' }} />
+              <img src="/logo-horizontal.png" alt="Auverion" style={{ height: '32px' }} />
             </Link>
             
             <div className="nav-links hide-mobile hide-tablet">
