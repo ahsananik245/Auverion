@@ -51,20 +51,15 @@ const ContactContent = () => {
     <div className="contact-content container">
       <div className="contact-info anim-slide-up">
         <h2>Get in Touch</h2>
-        <p>Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.</p>
+        <p>Have a question about RebarX, pricing, or anything else? Send us a message and we'll get back to you.</p>
         
         <div className="info-block">
-          <h4>📍 Headquarters</h4>
-          <p>100 Innovation Drive<br/>San Francisco, CA 94105</p>
-        </div>
-        <div className="info-block">
-          <h4>✉️ Email Us</h4>
+          <h4>✉️ Support</h4>
           <p><a href="mailto:support@auverion.com">support@auverion.com</a></p>
-          <p><a href="mailto:press@auverion.com">press@auverion.com</a></p>
         </div>
         <div className="info-block">
-          <h4>📞 Call Us</h4>
-          <p>+1 (800) 123-4567<br/>Mon-Fri, 9am to 6pm PST</p>
+          <h4>✉️ Press &amp; Media</h4>
+          <p><a href="mailto:press@auverion.com">press@auverion.com</a></p>
         </div>
       </div>
 
