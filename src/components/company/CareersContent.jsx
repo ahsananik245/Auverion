@@ -1,51 +1,45 @@
 import React from 'react';
 import './CareersContent.css';
 
-const jobs = [
-  { title: "Senior Frontend Engineer", location: "Remote", type: "Full-Time", dept: "Engineering" },
-  { title: "Product Designer", location: "New York, NY", type: "Full-Time", dept: "Design" },
-  { title: "Developer Advocate", location: "San Francisco, CA", type: "Full-Time", dept: "Marketing" },
-  { title: "Site Reliability Engineer", location: "Remote", type: "Full-Time", dept: "Engineering" },
-];
-
 const CareersContent = () => {
   return (
     <div className="careers-content container">
       <section className="careers-intro anim-slide-up">
         <div>
-          <h2>Join the Auverion Team</h2>
+          <h2>Work at Auverion</h2>
           <p className="text-secondary" style={{ marginTop: '16px', fontSize: 'var(--text-body-large)' }}>
-            We're always looking for talented individuals who share our vision and passion. At Auverion, you'll have the autonomy to do your best work and the support to grow your career.
+            Auverion is an early-stage startup and not currently hiring. When we do have open roles, they'll be posted here — honestly, with real locations and real job requirements.
           </p>
-          <div className="careers-perks">
-            <span className="perk-badge">🏠 Remote-First</span>
-            <span className="perk-badge">🏥 Comprehensive Health</span>
-            <span className="perk-badge">✈️ Unlimited PTO</span>
-            <span className="perk-badge">📚 Learning Stipend</span>
-            <span className="perk-badge">💻 Top-Tier Gear</span>
-          </div>
+          <p className="text-secondary" style={{ marginTop: '16px' }}>
+            If you're excited about what we're building and want to reach out anyway, we'd love to hear from you.
+          </p>
+          <a
+            href="/company/contact"
+            className="perk-badge"
+            style={{ display: 'inline-block', marginTop: '24px', textDecoration: 'none' }}
+          >
+            ✉️ Get in Touch
+          </a>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&w=800&q=80" alt="Working at Auverion" style={{ width: '100%', borderRadius: 'var(--radius-image)' }} />
+          <img
+            src="https://images.unsplash.com/photo-1522071901873-411886a10004?auto=format&fit=crop&w=800&q=80"
+            alt="Engineering workspace"
+            style={{ width: '100%', borderRadius: 'var(--radius-image)' }}
+          />
         </div>
       </section>
 
       <section className="open-positions anim-fade-in" style={{ animationDelay: '200ms' }}>
-        <h3 style={{ marginBottom: '32px' }}>Open Positions ({jobs.length})</h3>
-        <div className="jobs-list">
-          {jobs.map((job, idx) => (
-            <div className="job-card" key={idx}>
-              <div>
-                <h4 className="job-title">{job.title}</h4>
-                <div className="job-meta">
-                  <span>📍 {job.location}</span>
-                  <span>💼 {job.type}</span>
-                  <span>🏢 {job.dept}</span>
-                </div>
-              </div>
-              <button className="job-apply-btn">Apply Now</button>
-            </div>
-          ))}
+        <h3 style={{ marginBottom: '24px' }}>Open Positions</h3>
+        <div style={{
+          background: 'var(--surface-card)',
+          border: '1px solid var(--border-divider)',
+          borderRadius: 'var(--radius-card)',
+          padding: '48px 40px',
+          textAlign: 'center'
+        }}>
+          <p className="text-secondary">No open positions right now. Check back later.</p>
         </div>
       </section>
     </div>

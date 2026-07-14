@@ -1,14 +1,14 @@
 import React from 'react';
 import './ProductComparison.css';
 
+// Only RebarX is a real, released product.
+// All other columns represent future roadmap items — not released or in beta.
 const features = [
-  { name: 'Automatic Reinforcement', rebarx: true, steelx: false, foundx: true },
-  { name: 'ETABS Integration', rebarx: true, steelx: true, foundx: true },
-  { name: 'Revit Export', rebarx: true, steelx: true, foundx: true },
-  { name: 'Drawing Generation', rebarx: true, steelx: true, foundx: true },
-  { name: 'Tekla Structures Integration', rebarx: false, steelx: true, foundx: false },
-  { name: 'Batch Processing', rebarx: true, steelx: false, foundx: false },
-  { name: 'Cloud Sync', rebarx: 'Coming 2026', steelx: 'Coming 2026', foundx: 'Coming 2026' }
+  { name: 'Automatic Reinforcement', rebarx: true },
+  { name: 'ETABS Integration', rebarx: true },
+  { name: 'Revit Export', rebarx: true },
+  { name: 'Drawing Generation', rebarx: true },
+  { name: 'Batch Processing', rebarx: true },
 ];
 
 const Check = () => (
@@ -19,16 +19,14 @@ const Check = () => (
   </div>
 );
 
-const Dash = () => <div className="pc-dash">-</div>;
-
 const ProductComparison = () => {
   return (
     <section className="comparison-section">
       <div className="container">
         <div className="pc-header">
-          <h2 className="pc-title">Product Capabilities</h2>
+          <h2 className="pc-title">RebarX Capabilities</h2>
           <p className="pc-desc">
-            Compare the core functionalities across our current and upcoming engineering solutions.
+            What RebarX does today. More products coming to this table as they are released.
           </p>
         </div>
         
@@ -37,18 +35,14 @@ const ProductComparison = () => {
             <thead>
               <tr>
                 <th>Feature</th>
-                <th>RebarX (Beta)</th>
-                <th>SteelX (Beta)</th>
-                <th>FoundationX</th>
+                <th>RebarX</th>
               </tr>
             </thead>
             <tbody>
               {features.map((f, i) => (
                 <tr key={i}>
                   <td>{f.name}</td>
-                  <td>{typeof f.rebarx === 'boolean' ? (f.rebarx ? <Check /> : <Dash />) : f.rebarx}</td>
-                  <td>{typeof f.steelx === 'boolean' ? (f.steelx ? <Check /> : <Dash />) : f.steelx}</td>
-                  <td>{typeof f.foundx === 'boolean' ? (f.foundx ? <Check /> : <Dash />) : f.foundx}</td>
+                  <td>{f.rebarx ? <Check /> : <span style={{color: 'var(--text-muted)'}}>—</span>}</td>
                 </tr>
               ))}
             </tbody>

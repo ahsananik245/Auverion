@@ -1,6 +1,7 @@
 import React from 'react';
 import './FutureProducts.css';
 
+// These are genuine roadmap aspirations, not released or in-development products with confirmed specs.
 const futures = [
   {
     name: 'FoundationX',
@@ -13,14 +14,14 @@ const futures = [
     icon: 'M2 12h20 M4 12v8 M10 12v8 M14 12v8 M20 12v8 M6 4h12 M12 4v8'
   },
   {
-    name: 'DesignX',
-    desc: 'Generative AI structural design assistant and topology optimization engine.',
-    icon: 'M12 2v20 M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
-  },
-  {
     name: 'SteelX',
     desc: 'Intelligent design and detailing of steel connections and fabrication models.',
     icon: 'M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'
+  },
+  {
+    name: 'DesignX',
+    desc: 'Generative AI structural design assistant and topology optimization engine.',
+    icon: 'M12 2v20 M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
   },
   {
     name: 'Auverion Cloud',
@@ -41,14 +42,14 @@ const FutureProducts = () => {
         <div className="fp-header">
           <h2 className="fp-title">Expanding the Platform</h2>
           <p className="fp-desc">
-            We are continuously building out the Auverion ecosystem. Here is a look at the specialized tools currently in active development.
+            These are the tools we intend to build next. Nothing here is released or in active beta — they are roadmap aspirations that will be announced formally when ready.
           </p>
         </div>
         
         <div className="fp-grid">
           {futures.map((item, index) => (
             <div className="fp-card" key={index}>
-              <div className="fp-ribbon">In Dev</div>
+              <div className="fp-ribbon">Planned</div>
               <svg className="fp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d={item.icon}></path>
               </svg>

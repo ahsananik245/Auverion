@@ -52,6 +52,9 @@ const ProductRoadmap = () => {
       <div className="container">
         <div className="rm-header">
           <h2 className="rm-title">Product Roadmap</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'var(--text-sm)', marginTop: '8px' }}>
+            Dates are targets, not commitments. We'll update this as plans evolve.
+          </p>
         </div>
         
         <div className="rm-container">

@@ -23,7 +23,7 @@ const PricingTiers = () => {
             <div className="pt-features">
               <div className="pt-feature">
                 <svg className="pt-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Full Access to RebarX and FoundationX
+                Full Access to RebarX
               </div>
               <div className="pt-feature">
                 <svg className="pt-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -56,7 +56,7 @@ const PricingTiers = () => {
               </div>
               <div className="pt-feature">
                 <svg className="pt-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Native ETABS, Tekla, and Revit Integration
+                Native ETABS and Revit Integration
               </div>
               <div className="pt-feature">
                 <svg className="pt-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -64,7 +64,7 @@ const PricingTiers = () => {
               </div>
               <div className="pt-feature">
                 <svg className="pt-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Standard Email Support (24h SLA)
+                Standard Email Support
               </div>
             </div>
             <div className="pt-button">

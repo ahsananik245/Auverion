@@ -13,21 +13,21 @@ const products = [
     link: '/products/rebarx'
   },
   {
-    name: 'SteelX',
-    tagline: 'Steel Connection Automation',
-    desc: 'Intelligent design and detailing of steel connections, seamlessly bridging the gap between analysis and fabrication models.',
-    features: ['Auto Connection Design', 'Code Compliance Checking', 'Tekla Integration', 'Detailing Reports'],
-    status: 'Beta',
-    icon: 'M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z',
-    link: '#'
-  },
-  {
     name: 'FoundationX',
     tagline: 'Foundation Design Automation',
     desc: 'Automated design, detailing, and scheduling of complex deep and shallow foundation systems.',
     features: ['Pile Cap Optimization', 'Mat Foundation Detailing', 'Geotechnical Integration', 'Cost Estimation'],
     status: 'Coming Soon',
     icon: 'M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8c-2 0-3 1-3 3v15c0 1.5.5 2 2 2z M4 22h4 M12 2v20',
+    link: '#'
+  },
+  {
+    name: 'SteelX',
+    tagline: 'Steel Connection Automation',
+    desc: 'Intelligent design and detailing of steel connections, bridging the gap between analysis and fabrication.',
+    features: ['Auto Connection Design', 'Code Compliance Checking', 'Detailing Reports'],
+    status: 'Coming Soon',
+    icon: 'M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z',
     link: '#'
   },
   {
@@ -42,9 +42,9 @@ const products = [
   {
     name: 'Cloud',
     tagline: 'Collaborative Project Workspace',
-    desc: 'A unified cloud platform to share projects, manage licenses, and run massive batch processing operations remotely.',
+    desc: 'A unified cloud platform to share projects, manage licenses, and run batch processing operations remotely.',
     features: ['Centralized Storage', 'Batch Automation API', 'License Management', 'Version Control'],
-    status: 'Beta',
+    status: 'Coming Soon',
     icon: 'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z',
     link: '#'
   },
