@@ -7,7 +7,7 @@ const Documentation = () => {
   return (
     
     <>
-      <SEO title="Documentation" description="Browse guides, API references, and tutorials for the Auverion engineering software suite." />
+      <SEO title="Documentation" description="Revin user manual and guides for the Auverion suite — installation, license activation, usage, and troubleshooting for the offline AI Revit assistant." />
       <main>
       <DocumentationHero />
       <DocumentationContent />
