@@ -3,6 +3,29 @@
   background-color: var(--bg-primary);
 }
 
+/* suite: multiple product cards */
+.pd-container { display: flex; flex-direction: column; gap: 20px; }
+
+.pd-card--featured {
+  border: 1px solid #26364F;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25), 0 12px 40px rgba(15, 23, 42, 0.35);
+}
+
+.pd-tagline { margin: 6px 0 4px; color: #9ca3af; font-size: 14px; }
+
+.pd-badge.featured {
+  background: rgba(37, 99, 235, 0.15);
+  color: #93C5FD;
+}
+
+.pd-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.pd-learn-more { font-size: 13px; color: #93C5FD; text-decoration: none; }
+.pd-learn-more:hover { text-decoration: underline; }
+
+@media (max-width: 767px) {
+  .pd-right { align-items: stretch; }
+}
+
 .pd-container {
   max-width: 900px;
   margin: 0 auto;

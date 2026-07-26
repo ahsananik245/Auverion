@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import './SoftwarePreview.css';
 
@@ -16,9 +17,9 @@ const SoftwarePreview = () => {
             Interactive Software Preview
           </h2>
           <p className="preview-desc">
-            Explore the RebarX interface. Designed for professional structural teams, our platform offers a seamless experience from project dashboard to 3D reinforcement viewport.
+            Explore the Auverion suite inside Revit. From Revin’s plain-language assistant to RebarX’s reinforcement viewport, every tool is designed to feel native to your BIM workflow.
           </p>
-          <Button variant="primary">Start Free Trial</Button>
+          <Button as={Link} to="/products" variant="primary">Explore the Suite</Button>
         </div>
         
         <div className="preview-right">

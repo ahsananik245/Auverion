@@ -27,7 +27,7 @@ const Pricing = () => {
   return (
     
     <>
-      <SEO title="Pricing" description="Simple, transparent pricing for Auverion RebarX. Professional and Enterprise plans available." />
+      <SEO title="Pricing" description="Simple, transparent pricing for the Auverion suite. Revin offers a free tier plus Pro, Founder, and Enterprise plans; RebarX is licensed separately." />
       <main>
       <PricingHero />
       <PricingTiers />

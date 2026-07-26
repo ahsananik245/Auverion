@@ -9,8 +9,8 @@ const Download = () => {
   return (
     <>
       <SEO
-        title="Install RebarX — Revit Plugin"
-        description="Install the RebarX Revit plugin to automate column and beam rebar detailing from ETABS design results directly inside Revit. Free 14-day trial."
+        title="Download — Auverion Suite for Revit"
+        description="Download the Auverion suite for Revit: Revin, an offline AI assistant that automates modeling and documentation, and RebarX for structural reinforcement detailing. Windows 64-bit."
       />
       <main>
         <DownloadHero />

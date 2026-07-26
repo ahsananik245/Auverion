@@ -19,9 +19,10 @@ const PipelineWorkflow = () => {
   return (
     <section className="pipeline-section">
       <div className="pipeline-header">
+        <span className="pipeline-eyebrow">Inside RebarX</span>
         <h2>
-          One Intelligent Workflow <br />
           From Analysis to Reinforcement <br />
+          In One Intelligent Workflow <br />
           Without Manual Rework.
         </h2>
       </div>

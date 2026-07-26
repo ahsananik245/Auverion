@@ -1,3 +1,13 @@
+.pipeline-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #93C5FD;
+  margin-bottom: 12px;
+}
+
 .pipeline-section {
   background-color: var(--bg-primary);
   min-height: 760px;

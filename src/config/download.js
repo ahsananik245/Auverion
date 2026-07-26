@@ -38,3 +38,14 @@ export const DOWNLOAD_URL =
 // link near the button.
 export const RELEASE_PAGE_URL =
   `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/tag/${RELEASE_TAG}`;
+
+// --- Revin (offline AI assistant for Revit) -----------------------------------
+// The fat installer bundles the local AI model, so it is large (~2 GB). Upload
+// AuverionRevin-Setup.exe as an asset to the GitHub Release, then this direct
+// link works. Until it is uploaded, the Download page links to the release page.
+const REVIN_INSTALLER_FILENAME = "AuverionRevin-Setup.exe";
+export const REVIN_DOWNLOAD_URL =
+  `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/download/${RELEASE_TAG}/${REVIN_INSTALLER_FILENAME}`;
+// Flip to true once AuverionRevin-Setup.exe is actually uploaded to the release,
+// so the button becomes a direct download instead of pointing at the release page.
+export const REVIN_INSTALLER_PUBLISHED = false;

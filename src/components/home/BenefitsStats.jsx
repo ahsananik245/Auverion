@@ -15,7 +15,7 @@ const BenefitsStats = () => {
             <div className="benefit-stat">80%</div>
             <h3 className="benefit-title">Save Time</h3>
             <p className="benefit-desc">
-              Reduce reinforcement modeling and detailing time significantly. RebarX automates the most time-consuming aspects of structural engineering.
+              Cut hours of repetitive BIM work. Revin automates modeling and documentation from a single plain-language request, right inside Revit.
             </p>
           </div>
           
@@ -24,10 +24,10 @@ const BenefitsStats = () => {
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <div className="benefit-stat">95%</div>
-            <h3 className="benefit-title">Increase Accuracy</h3>
+            <div className="benefit-stat">100%</div>
+            <h3 className="benefit-title">Stay Private</h3>
             <p className="benefit-desc">
-              Eliminate human errors in data transfer. Direct integration with ETABS ensures that the reinforcement matches the analyzed forces perfectly.
+              Everything runs on your machine. No cloud, no API keys, no project data leaving your PC — built for NDA, government, and air-gapped work.
             </p>
           </div>
           
@@ -41,7 +41,7 @@ const BenefitsStats = () => {
             <div className="benefit-stat">90%</div>
             <h3 className="benefit-title">Reduce Manual Work</h3>
             <p className="benefit-desc">
-              No more manual drafting of sections or calculating quantities. RebarX handles repetitive tasks so you can focus on engineering decisions.
+              From batch plans and schedules to reinforcement detailing, the Auverion suite handles the repetitive tasks so you focus on design decisions.
             </p>
           </div>
         </div>

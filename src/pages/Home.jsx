@@ -11,9 +11,9 @@ import FAQ from '../components/home/FAQ';
 const Home = () => {
   return (
     <>
-      <SEO 
-        title="" 
-        description="Auverion builds next-generation structural engineering software, helping engineers automate workflows and design with confidence." 
+      <SEO
+        title=""
+        description="Auverion builds automation tools for AEC — including Revin, an offline AI assistant that models and documents Revit projects from plain language, and RebarX for structural reinforcement detailing."
       />
       <main>
         <HeroSection />

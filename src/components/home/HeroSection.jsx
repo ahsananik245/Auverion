@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import HeroAnimation from './HeroAnimation';
-import { DOWNLOAD_URL } from '../../config/download';
 import './HeroSection.css';
 
 const TYPING_PHRASES = [
-  'Without Manual Rework.',
-  'Without Repetitive Tasks.',
-  'With Intelligent Automation.',
-  'Built for Structural Teams.',
+  'From Plain Language.',
+  'Without Leaving Revit.',
+  'Fully Offline.',
+  'Built for AEC Teams.',
 ];
 
 const useTypingEffect = (phrases, speed = 55, pause = 2000) => {
@@ -42,29 +42,29 @@ const useTypingEffect = (phrases, speed = 55, pause = 2000) => {
 };
 
 const PIPELINE_STEPS = [
-  { icon: '⬡', label: 'Load ETABS Model', status: 'done', color: '#22C55E' },
-  { icon: '⬡', label: 'Extract Sections', status: 'done', color: '#22C55E' },
-  { icon: '⬡', label: 'Run Rebar Calc', status: 'active', color: '#3B82F6' },
-  { icon: '⬡', label: 'Output to Revit', status: 'pending', color: '#314765' },
+  { icon: '⬡', label: 'Understand Request', status: 'done', color: '#22C55E' },
+  { icon: '⬡', label: 'Plan the Steps', status: 'done', color: '#22C55E' },
+  { icon: '⬡', label: 'Model in Revit', status: 'active', color: '#3B82F6' },
+  { icon: '⬡', label: 'Document & Export', status: 'pending', color: '#314765' },
 ];
 
 const LiveMockup = () => {
   const [progress, setProgress] = useState(0);
   const [activeBar, setActiveBar] = useState(0);
   const [log, setLog] = useState([
-    '> RebarX Revit plugin loaded...',
-    '> Reading structural sections...',
+    '> Revin loaded — offline model ready',
+    '> "Create floor plans for all levels"',
   ]);
   const logRef = useRef(null);
 
   const LOG_LINES = [
-    '> [Plugin] Reading Revit model...',
-    '> Calculating beam B-12...',
-    '> AS_req = 1842 mm²  ✓',
-    '> Beam B-13 → 4T20 selected',
-    '> Column C-07 check passed',
-    '> Exporting to Revit...',
-    '> Pipeline complete. 0 errors.',
+    '> Reading active Revit model...',
+    '> create_floor_plans → 4 views  ✓',
+    '> tag_all_in_view → 128 doors  ✓',
+    '> create_schedule → Door Schedule  ✓',
+    '> export_schedule_csv → schedule.csv  ✓',
+    '> estimate_embodied_carbon → report  ✓',
+    '> Done. 0 errors — nothing left the machine.',
   ];
 
   useEffect(() => {
@@ -102,18 +102,18 @@ const LiveMockup = () => {
           <span className="lm-dot lm-dot--yellow" />
           <span className="lm-dot lm-dot--green" />
         </div>
-        <span className="lm-title-text">RebarX — Revit Plugin</span>
+        <span className="lm-title-text">Revin — AI Assistant for Revit</span>
         <span className="lm-status-pill">
           <span className="lm-status-live" />
-          LIVE
+          OFFLINE
         </span>
       </div>
 
       {/* Body */}
       <div className="lm-body">
-        {/* Left sidebar: pipeline steps */}
+        {/* Left sidebar: task steps */}
         <div className="lm-sidebar">
-          <div className="lm-sidebar-label">PIPELINE</div>
+          <div className="lm-sidebar-label">TASK</div>
           {PIPELINE_STEPS.map((step, i) => (
             <div
               key={i}
@@ -199,11 +199,11 @@ const HeroSection = () => {
         <div className="hero-left">
           <div className="hero-eyebrow anim-item" style={{ '--delay': '0ms' }}>
             <span className="hero-eyebrow-dot" />
-            Structural Engineering Automation
+            The Auverion Suite · Automation for AEC
           </div>
 
           <h1 className="text-hero hero-title anim-item" style={{ '--delay': '100ms' }}>
-            Structural Reinforcement <br />
+            Automate Your BIM <br />
             <span className="hero-highlight hero-typed">
               {typed}
               <span className="hero-caret" aria-hidden="true" />
@@ -211,20 +211,20 @@ const HeroSection = () => {
           </h1>
 
           <p className="hero-desc anim-item" style={{ '--delay': '200ms' }}>
-            Automate reinforcement workflows between ETABS and Revit with intelligent engineering automation built for professional structural teams.
+            Auverion builds automation tools that live inside your BIM workflow. Meet <strong>Revin</strong> — an offline AI assistant that models and documents Revit projects from plain-language requests — alongside <strong>RebarX</strong> for structural reinforcement detailing.
           </p>
 
           <div className="hero-buttons anim-item" style={{ '--delay': '300ms' }}>
-            <Button as="a" href={DOWNLOAD_URL} variant="primary" size="large" download>
-              ⬇ Install RebarX Plugin
+            <Button as={Link} to="/products/revin" variant="primary" size="large">
+              Meet Revin
             </Button>
-            <Button variant="ghost" size="large">Watch Demo</Button>
+            <Button as={Link} to="/products" variant="ghost" size="large">Explore the Suite</Button>
           </div>
 
           <div className="hero-stats anim-item" style={{ '--delay': '400ms' }}>
             {[
-              { num: '20x', label: 'Faster Workflow' },
-              { num: '98%', label: 'Automation Accuracy' },
+              { num: '100%', label: 'Runs Offline' },
+              { num: '100+', label: 'Automation Tools' },
               { num: 'Native', label: 'Revit Plugin' },
             ].map(({ num, label }) => (
               <div key={label} className="hero-stat">
@@ -238,7 +238,7 @@ const HeroSection = () => {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
-            Professional Engineering Software
+            Your data never leaves your machine
           </div>
         </div>
 
@@ -250,11 +250,11 @@ const HeroSection = () => {
             {/* Floating status cards */}
             <div className="floating-card card-1">
               <div className="status-dot green" />
-              ETABS Connected
+              Offline Model Ready
             </div>
             <div className="floating-card card-2">
               <div className="status-dot gold" />
-              Auto Pipeline Ready
+              No Cloud Needed
             </div>
             <div className="floating-card card-3">
               <div className="status-dot blue" />

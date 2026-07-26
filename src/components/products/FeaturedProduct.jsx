@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
-import { DOWNLOAD_URL } from '../../config/download';
 import './FeaturedProduct.css';
 
 const FeaturedProduct = () => {
   return (
-    <section className="featured-product" id="rebarx">
+    <section className="featured-product" id="revin">
       <div className="container">
         <div className="featured-content">
           
@@ -25,29 +25,29 @@ const FeaturedProduct = () => {
           
           <div className="featured-right">
             <div className="featured-badge">FLAGSHIP PRODUCT</div>
-            
-            <h2 className="featured-title">RebarX</h2>
-            <h3 className="featured-subtitle">Native Revit Plugin for<br/>Structural Reinforcement</h3>
-            
+
+            <h2 className="featured-title">Revin</h2>
+            <h3 className="featured-subtitle">Offline AI Assistant for<br/>Modeling &amp; Documentation</h3>
+
             <p className="featured-desc">
-              Automate reinforcement workflows from ETABS to Revit with intelligent engineering automation designed for structural professionals.
+              A native Revit plugin with a bundled, fine-tuned AI model that runs fully offline. Automate modeling and documentation with plain-language requests — no cloud, no API key, your data never leaves your machine.
             </p>
-            
+
             <div className="featured-buttons">
-              <Button as="a" href={DOWNLOAD_URL} variant="primary" size="large" download>
-                ⬇ Install RebarX Plugin
+              <Button as={Link} to="/products/revin" variant="primary" size="large">
+                Meet Revin
               </Button>
-              <Button variant="ghost" size="large">Read Documentation</Button>
+              <Button as={Link} to="/download" variant="ghost" size="large">Download</Button>
             </div>
             
             <div className="featured-stats">
               <div>
-                <div className="featured-stat-number">20x</div>
-                <div className="featured-stat-label">Faster</div>
+                <div className="featured-stat-number">100%</div>
+                <div className="featured-stat-label">Offline</div>
               </div>
               <div>
-                <div className="featured-stat-number">98%</div>
-                <div className="featured-stat-label">Automation Accuracy</div>
+                <div className="featured-stat-number">100+</div>
+                <div className="featured-stat-label">Automation Tools</div>
               </div>
               <div>
                 <div className="featured-stat-number">100%</div>
@@ -58,11 +58,11 @@ const FeaturedProduct = () => {
                 <div className="featured-stat-label">Native</div>
               </div>
             </div>
-            
+
             <div className="featured-compat">
-              <span className="compat-chip">ETABS</span>
+              <span className="compat-chip">Bundled AI Model</span>
               <span className="compat-chip">Revit Plugin</span>
-              <span className="compat-chip">EXR</span>
+              <span className="compat-chip">Plain Language</span>
               <span className="compat-chip">Windows 64-bit</span>
             </div>
             

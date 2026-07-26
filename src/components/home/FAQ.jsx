@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 import './FAQ.css';
 
 const faqs = [
   {
-    q: 'How does RebarX work?',
-    a: 'RebarX extracts internal forces directly from your structural analysis model (like ETABS), processes them through our proprietary automation engine, and automatically generates detailed 3D reinforcement models and 2D documentation.'
+    q: 'What is the Auverion suite?',
+    a: 'A set of automation tools that live inside Autodesk Revit. Revin is an offline AI assistant that models and documents projects from plain-language requests; RebarX automates structural reinforcement detailing from ETABS analysis.'
   },
   {
-    q: 'Which ETABS versions are supported?',
-    a: 'We support all major versions of ETABS from v18 through the latest release. The integration works natively via our ETABS plugin or EXR export format.'
+    q: 'Does Revin need internet or an API key?',
+    a: 'No. Revin ships with its own fine-tuned AI model that runs locally on your machine, so it works completely offline with no API key. You can optionally connect a cloud model with your own key, but the offline model is the default.'
+  },
+  {
+    q: 'Is my project data sent anywhere?',
+    a: 'No. With the bundled offline model, nothing about your model or conversation leaves your computer — which makes Revin suitable for NDA, government, and air-gapped work where cloud AI is not allowed.'
   },
   {
     q: 'Which Revit versions are supported?',
-    a: 'RebarX connects seamlessly with Autodesk Revit 2021 through 2025 for final BIM coordination and detailing.'
+    a: 'The tools install into Autodesk Revit 2022 through 2026 on Windows 10/11 (64-bit). The installer auto-detects your installed versions, including custom install folders.'
   },
   {
-    q: 'What type of License do you offer?',
-    a: 'We offer Professional, Enterprise, and Academic licenses on an annual subscription basis. Network licensing is available for Enterprise teams.'
+    q: 'What licensing do you offer?',
+    a: 'Revin has a free tier plus Pro ($29/mo or $249/yr), a limited Founder lifetime plan, and custom Enterprise licensing. RebarX is licensed separately. Everything activates and then runs offline.'
   },
   {
-    q: 'Does it work Offline?',
-    a: 'Yes, RebarX operates entirely as a native Revit plugin. While internet is required for initial activation and occasional updates, day-to-day engineering workflows function completely offline within Revit.'
-  },
-  {
-    q: 'How are Updates handled?',
-    a: 'Updates are delivered seamlessly through the application. Professional and Enterprise users receive priority access to new feature releases.'
+    q: 'How are updates handled?',
+    a: 'The add-in checks for new releases and shows an in-app notice when one is available. Small code updates never require re-downloading the bundled AI model.'
   }
 ];
 
@@ -68,10 +69,10 @@ const FAQ = ({ faqsData }) => {
 
       <section className="cta-section">
         <div className="container">
-          <h2 className="cta-title">Ready to Automate<br />Your Reinforcement Workflow?</h2>
+          <h2 className="cta-title">Ready to Automate<br />Your BIM Workflow?</h2>
           <div className="cta-buttons">
-            <Button variant="primary" size="large">Download</Button>
-            <Button variant="ghost" size="large">Documentation</Button>
+            <Button as={Link} to="/download" variant="primary" size="large">Download</Button>
+            <Button as={Link} to="/documentation" variant="ghost" size="large">Documentation</Button>
           </div>
         </div>
       </section>

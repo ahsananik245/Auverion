@@ -20,8 +20,9 @@ const Footer = () => {
           <div>
             <h4 className="footer-heading">Products</h4>
             <ul className="footer-links">
+              <li><Link to="/products/revin" className="footer-link">Revin</Link></li>
               <li><Link to="/products/rebarx" className="footer-link">RebarX</Link></li>
-              <li><span className="footer-link disabled">Future Products (Coming Soon)</span></li>
+              <li><Link to="/products" className="footer-link">All Products</Link></li>
               <li><span className="footer-link disabled">Product Roadmap (Coming Soon)</span></li>
             </ul>
           </div>
