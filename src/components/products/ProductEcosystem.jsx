@@ -4,6 +4,15 @@ import './ProductEcosystem.css';
 
 const products = [
   {
+    name: 'Revin',
+    tagline: 'Offline AI Assistant for Revit',
+    desc: 'A native Revit plugin with a bundled, fine-tuned AI model that runs fully offline. Automate modeling and documentation with plain-language requests.',
+    features: ['Bundled Offline AI', '100+ Automation Tools', 'Plain-Language Control', 'Data Never Leaves Your PC'],
+    status: 'Released',
+    icon: 'M12 2a5 5 0 0 0-5 5v2a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z M8 14a4 4 0 0 0 8 0 M12 18v3 M9 21h6',
+    link: '/products/revin'
+  },
+  {
     name: 'RebarX',
     tagline: 'Structural Reinforcement Automation',
     desc: 'Automates reinforcement modeling and detailing from structural analysis directly to final 2D drawings and BOQ.',

@@ -1,0 +1,40 @@
+.revin-hero { padding: 5rem 0 3rem; text-align: center; }
+
+.revin-hero-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #93C5FD;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid #26364F;
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 1.5rem;
+}
+
+.revin-hero-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+.revin-hero-tagline {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.6;
+  color: #9ca3af;
+}
+
+.revin-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .revin-hero { padding: 3rem 0 2rem; }
+  .revin-hero-actions { flex-direction: column; align-items: stretch; }
+}
