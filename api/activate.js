@@ -50,21 +50,34 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'licenseKey and machineGuid are required' });
 
   try {
-    let active = false, instId = instanceId, status;
+    let active = false, instId = instanceId, status, meta;
 
     if (instanceId) {
       const j = await lsPost('validate', { license_key: licenseKey, instance_id: instanceId });
       status = j?.license_key?.status;
+      meta = j?.meta;
       active = !!j.valid && status === 'active';
     } else {
       const j = await lsPost('activate', { license_key: licenseKey, instance_name: machineGuid });
       status = j?.license_key?.status;
       instId = j?.instance?.id;
+      meta = j?.meta;
       active = !!j.activated && status === 'active';
       if (!active && j?.error) return res.status(403).json({ error: j.error, status });
     }
 
     if (!active) return res.status(403).json({ error: 'License not active', status });
+
+    // Only activate keys for a Revin product. Without this, ANY Lemon Squeezy key from the store
+    // (e.g. a RebarX key) would unlock Revin Pro. Set REVIN_LS_VARIANTS to a comma-separated list
+    // of the Revin Pro/Founder variant IDs (from the LS dashboard). If unset, this check is skipped
+    // (fine for a single-product store, but set it before you sell anything else on the same store).
+    const allowed = (process.env.REVIN_LS_VARIANTS || '').split(',').map((s) => s.trim()).filter(Boolean);
+    if (allowed.length) {
+      const variant = String(meta?.variant_id ?? '');
+      if (!allowed.includes(variant))
+        return res.status(403).json({ error: 'This license key is not for Revin' });
+    }
 
     const expires = new Date(Date.now() + OFFLINE_DAYS * 86400000).toISOString();
     const license = signLicense({ key: licenseKey, expires, machineGuid });

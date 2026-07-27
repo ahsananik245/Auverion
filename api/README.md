@@ -21,6 +21,7 @@ The add-in stores `license` (validated offline by `License.cs`) and `instanceId`
 |---|---|---|
 | `REVIN_LICENSE_PRIVATE_KEY` | The **PKCS#8 PEM** private key (paste the full `-----BEGIN PRIVATE KEY----- … -----END PRIVATE KEY-----`). Generated locally from `private_key.xml` → `revin-license-private.pem` (kept OUT of git). | `/api/activate` signing |
 | `LEMONSQUEEZY_WEBHOOK_SECRET` | The signing secret you set when creating the LS webhook. | `/api/lemonsqueezy-webhook` |
+| `REVIN_LS_VARIANTS` | Comma-separated Lemon Squeezy **variant IDs** for the Revin Pro + Founder products (from the LS dashboard). Ensures a key for another product (e.g. RebarX) can't unlock Revin. Optional for a single-product store; set it before selling anything else. | `/api/activate` |
 
 > The LS license `activate`/`validate` endpoints authenticate with the license key itself, so **no LS store API key is required** for `/api/activate`.
 
