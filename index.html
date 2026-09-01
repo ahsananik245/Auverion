@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auverion | Professional Engineering Software</title>
     <meta name="description" content="Auverion develops professional engineering software that automates structural workflows, reduces repetitive work, and improves design accuracy." />
-    
+
+    <!-- Social cards, in the STATIC shell rather than only in <SEO>.
+         react-helmet-async sets per-page tags at run time, which is right for
+         browsers and for Google, because both execute JavaScript. LinkedIn,
+         WhatsApp, Facebook, X and Slack do NOT — they read this file and stop.
+
+         Without these, a link to any page here previewed as a bare title with
+         no image and no description, on exactly the channels a launch travels
+         through. These give every page a correct branded card; <SEO> still
+         overrides title and description per page for anything that runs the
+         app. Per-page social cards need prerendering, which is a build change
+         worth making later. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Auverion" />
+    <meta property="og:title" content="Auverion | Professional Engineering Software" />
+    <meta property="og:description" content="Structural engineering software that automates the repetitive work — Revin, the offline AI assistant for Revit, and RebarX for reinforcement detailing." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image:alt" content="Auverion — professional engineering software" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Auverion | Professional Engineering Software" />
+    <meta name="twitter:description" content="Structural engineering software that automates the repetitive work — Revin, the offline AI assistant for Revit, and RebarX for reinforcement detailing." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="theme-color" content="#0B0B0F" />
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
