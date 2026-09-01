@@ -27,8 +27,14 @@ const INSTALLER_FILENAME = "AuverionRebarX-Setup.exe";
 // at all, since it would tell a visitor a genuine file is corrupted.
 // Regenerate with (PowerShell, on the exact file you're about to upload
 // to the GitHub Release): Get-FileHash .\AuverionRebarX-Setup.exe -Algorithm SHA256
+// Verified 2026-09-02 by downloading the published asset and hashing it:
+//   .../releases/download/v2.0.0/AuverionRebarX-Setup.exe, 2,479,175 bytes
+// The previous value did NOT match that file. The warning above turned out
+// to be the exact failure: the site asks visitors to check the hash, so a
+// wrong one does not merely fail to help - it tells someone a genuine
+// installer has been corrupted or tampered with.
 export const INSTALLER_SHA256 =
-  "9838707bc30cbc89a08474d88ba6d3aa0e7a003813181ea71c8bc35db4a1f035";
+  "b53326768d78256e6d678b8f1263c4a075934d0b9dcb796f8419dbbb45dadc48";
 
 export const DOWNLOAD_URL =
   `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases/download/${RELEASE_TAG}/${INSTALLER_FILENAME}`;
